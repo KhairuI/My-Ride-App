@@ -2,5 +2,5 @@
     <string name="app_name">DemoRide</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="map_api_key">AIzaSyA3lxe396Fw3IdDEpHNO3hsabtJCLaAvLE</string>
+    <string name="map_api_key">your_api_key</string>
 </resources>
