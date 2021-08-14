@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/restaurantFragment">
+
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.example.demoride.fragments.RestaurantFragment"
+        android:label="fragment_restaurant"
+        tools:layout="@layout/fragment_restaurant" />
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.demoride.fragments.ShoppingFragment"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" />
+    <fragment
+        android:id="@+id/hospitalFragment"
+        android:name="com.example.demoride.fragments.HospitalFragment"
+        android:label="fragment_hospital"
+        tools:layout="@layout/fragment_hospital" />
+</navigation>

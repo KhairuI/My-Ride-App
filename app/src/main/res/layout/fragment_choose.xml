@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChooseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".fragments.MapFragment">
+
+        </fragment>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm_destination"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:strokeWidth="2dp"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/white"
+            android:text="Confirm Destination"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_destination_location"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Choose Destination"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/ic_location_icon_self"
+            android:drawablePadding="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:background="@drawable/text_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_destination"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:hint="Search destination"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/ic_search"
+            app:startIconTint="#F50D3F"
+            app:endIconMode="clear_text"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_destination_location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_choose_destination"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+        </ImageView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/place_recycle"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_destination"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

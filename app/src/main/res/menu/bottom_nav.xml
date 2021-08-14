@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item  android:title="Restaurant"
+        android:id="@+id/restaurantFragment"
+        android:icon="@drawable/ic_restaurant"/>
+
+    <item  android:title="Shopping mall"
+        android:id="@+id/shoppingFragment"
+        android:icon="@drawable/ic_shopping_mall"/>
+
+    <item  android:title="Hospital"
+        android:id="@+id/hospitalFragment"
+        android:icon="@drawable/ic_hospital"/>
+</menu>

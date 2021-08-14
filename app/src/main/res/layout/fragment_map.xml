@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MapFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <fragment
+           android:id="@+id/map_fragment"
+           android:name="com.google.android.gms.maps.SupportMapFragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           tools:context=".fragments.MapFragment">
+
+       </fragment>
+
+       <com.google.android.material.textview.MaterialTextView
+           android:id="@+id/txt_self_location"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"
+           android:layout_marginTop="8dp"
+           android:text="Your place"
+           android:singleLine="true"
+           android:ellipsize="marquee"
+           android:marqueeRepeatLimit="marquee_forever"
+           android:scrollHorizontally="true"
+           android:padding="8dp"
+           android:gravity="center_vertical"
+           android:drawableStart="@drawable/ic_location_icon_self"
+           android:drawablePadding="8dp"
+           android:textSize="14sp"
+           android:textColor="@color/black"
+           android:background="@drawable/text_bg"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       </com.google.android.material.textview.MaterialTextView>
+
+       <com.google.android.material.textview.MaterialTextView
+           android:id="@+id/txt_destination_location"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="4dp"
+           android:layout_marginEnd="8dp"
+           android:background="@drawable/text_bg"
+           android:drawableStart="@drawable/ic_location_icon_pink"
+           android:drawablePadding="8dp"
+           android:ellipsize="marquee"
+           android:gravity="center_vertical"
+           android:marqueeRepeatLimit="marquee_forever"
+           android:padding="8dp"
+           android:scrollHorizontally="true"
+           android:singleLine="true"
+           android:text="Choose Destination"
+           android:textColor="@color/black"
+           android:textSize="14sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/txt_self_location">
+
+       </com.google.android.material.textview.MaterialTextView>
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btn_confirm"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:strokeWidth="2dp"
+           app:cornerRadius="16dp"
+           app:strokeColor="@color/white"
+           android:text="Confirm"
+           android:backgroundTint="@color/white"
+           android:textColor="@color/black"
+           android:textAllCaps="false"
+           android:textSize="14sp"
+           android:layout_marginBottom="8dp"
+           style="?attr/materialButtonOutlinedStyle"
+           android:layout_width="200dp"
+           android:layout_height="wrap_content">
+
+       </com.google.android.material.button.MaterialButton>
+
+      <ImageButton
+          android:id="@+id/btn_my_location"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+          android:background="@drawable/round_bg_white"
+          android:layout_marginBottom="16dp"
+          android:clickable="true"
+          android:layout_marginEnd="16dp"
+          android:src="@drawable/ic_my_location"
+          android:layout_width="48dp"
+          android:layout_height="48dp">
+
+      </ImageButton>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MainFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           app:layout_constraintTop_toTopOf="parent"
+           android:text="My Ride App"
+           android:textStyle="bold"
+           android:layout_marginTop="24dp"
+           android:id="@+id/ride_app"
+           android:textSize="24sp"
+           android:textColor="@color/black"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+       </TextView>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_marginTop="32dp"
+           android:id="@+id/layout_ride"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bg_layout_border_r5_stroke_gray"
+           android:padding="12dp"
+           app:layout_constraintBottom_toTopOf="@+id/layout_near"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/ride_app">
+
+           <TextView
+               android:id="@+id/ride"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Ride"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/img_car">
+
+           </TextView>
+
+           <ImageView
+               android:id="@+id/img_car"
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:src="@drawable/ic_car"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+           </ImageView>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_marginTop="24dp"
+           android:id="@+id/layout_near"
+           android:layout_width="150dp"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bg_layout_border_r5_stroke_gray"
+           android:padding="12dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/layout_ride">
+
+           <TextView
+               android:id="@+id/near"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Nearby Place"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/img_near">
+
+           </TextView>
+
+           <TextView
+               android:text="(Near 5 KM)"
+               android:textColor="@color/black"
+               android:textSize="12sp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/near"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+           </TextView>
+
+           <ImageView
+               android:id="@+id/img_near"
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:src="@drawable/ic_near"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+
+           </ImageView>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+       <TextView
+           android:text="Click for your current location"
+           android:id="@+id/txt_current"
+           android:textSize="12sp"
+           android:layout_marginTop="8dp"
+           android:textColor="@color/purple_500"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/layout_near"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+       </TextView>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
